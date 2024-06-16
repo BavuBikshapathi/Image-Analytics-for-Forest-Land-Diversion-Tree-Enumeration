@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>About - Tree Counting Using Satellite Image</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/favicon.ico') }}" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <h1 class="site-heading text-center text-faded d-none d-lg-block">
+            <span class="site-heading-upper text-primary mb-3"><h1>Image Analytics for Forest Land Diversion Tree Enumeration</h1></span>
+        </h1>
+        </h1>
+    </header>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand text-uppercase fw-bold d-lg-none" href="{{ url_for('index') }}">Start application</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="{{ url_for('index') }}">Home</a></li>
+                    <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="{{ url_for('about') }}">About</a></li>
+                    <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="{{ url_for('upload') }}">Predict here</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="page-section cta">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-9 mx-auto">
+                    <div class="cta-inner bg-faded text-center rounded">
+                        <h2 class="section-heading mb-4">
+                            <span class="section-heading-upper">About</span>
+                            <span class="section-heading-lower">Tree Counting Application</span>
+                        </h2>
+                        <h3 class="mb-0">This application uses state-of-the-art machine learning models to detect and count trees from satellite images. The goal is to simplify and automate the process of tree counting for environmental studies and forestry management.
+
+                            Tree count management is important for sustaining conservational stability and ecological
+biodiversity. A systematic tree inventory of the forested areas and in the urban areas can help us
+involvedly view the causes of decline of forests in the area, decline in green cover in urban areas
+etc. Challenges are difficult when we have to locate palm trees on the surface of the earth. This
+makes the work of administration department very difficult gives inadequate tree data for the
+advanced experts in agriculture. For this reason, They give an advanced and sophisticated
+framework which helps to make a stock of crowns of the trees through automation of counting
+and geolocating them using aerial color photograph
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer text-faded text-center py-5">
+        <div class="container"><p class="m-0 small">&copy; 2024 tree enumeration</p></div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

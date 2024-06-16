@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['0']
+
+roboflow:
+  workspace: freya-knox-t2gms
+  project: tree-counting-rjnc9
+  version: 8
+  license: MIT
+  url: https://universe.roboflow.com/freya-knox-t2gms/tree-counting-rjnc9/dataset/8

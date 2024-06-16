@@ -1,0 +1,145 @@
+/* Custom CSS for Tree Counting Application */
+
+/* Global Styles */
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Custom CSS for Tree Counting Application */
+
+/* Header Styles */
+.site-heading {
+    margin: 0 auto;
+    padding: 2rem 0;
+    background-color:#6C0345;
+    color: #fff;
+    text-align: center;
+}
+
+.site-heading-upper {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.site-heading-lower {
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1.1;
+}
+
+
+/* Navigation Styles */
+#mainNav .navbar-nav .nav-link {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+#mainNav .navbar-nav .nav-link:hover {
+    color: #f8f9fa;
+}
+
+#mainNav .navbar-toggler {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+   
+}
+
+.navbar {
+    background-color: #6bb15d; /* Background color for the navbar */
+    box-shadow: 0 4px 8px rgba(20, 123, 123, 0.1);
+     display: flex;
+     flex: 1;
+    justify-content: space-between; 
+    /* Add shadow for better separation */
+}
+
+.nav-link {
+    padding: 1rem 1.5rem; /* Add padding for better spacing */
+    transition: color 0.3s; /* Smooth transition for color change */
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-link:hover {
+    color:crimson; /* Change color on hover */
+}
+
+/* Section Styles */
+.page-section {
+    padding: 5rem 0;
+}
+
+.page-section .section-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.page-section .section-subheading {
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-bottom: 3rem;
+    color: #6c757d;
+}
+
+/* Intro Section */
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+}
+
+.intro .intro-img {
+    max-width: 50%;
+    border-radius: 0.5rem;
+}
+
+.intro .intro-text {
+    max-width: 45%;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.intro .section-heading-upper {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.intro .section-heading-lower {
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.1;
+}
+
+.intro-button .btn {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 2rem 0;
+}
+
+.footer .container p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+#listt{
+    display: flex;
+    justify-content:space-between;
+    position: relative;
+    padding-left:1200px;
+
+}
