@@ -29,28 +29,30 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto">
+                    <div id="listt">
                     <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="{{ url_for('index') }}">Home</a></li>
                     <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="{{ url_for('about') }}">About</a></li>
                     <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="{{ url_for('upload') }}">Predict here</a></li>
+                </div>
                 </ul>
             </div>
         </div>
     </nav>
     <section class="page-section">
         <div class="container">
-            <div class="text-center">
+            <div class="text-center1">
                 <h2 class="section-heading text-uppercase">Upload Image for Tree Detection</h2>
                 <h3 class="section-subheading text-muted"><h3> Please upload an image file (JPG, JPEG, or PNG).</h3>
             </div>
             <form id="uploadForm" name="uploadForm" action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data">
                 <div class="row align-items-stretch mb-5">
-                    <div class="col-md-6 mx-auto">
+                    <div class="text-center1">
                         <div class="form-group">
                             <input type="file" name="file" class="form-control" accept="image/*" required />
                         </div>
                     </div>
                 </div>
-                <div class="text-center">
+                <div class="text-center1">
                     <button type="submit" class="btn btn-primary btn-xl text-uppercase"><h2><b>Predict</b></h2></button>
                 </div>
             </form>

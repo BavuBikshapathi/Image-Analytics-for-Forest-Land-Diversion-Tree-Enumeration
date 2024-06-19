@@ -140,6 +140,18 @@ body {
     display: flex;
     justify-content:space-between;
     position: relative;
-    padding-left:1200px;
+    padding-left:1500px;
 
+}
+ul{
+list-style-type:none;
+text-decoration: none;
+
+
+}
+ul>li{
+    text-decoration: none;
+}
+.text-center1{
+    padding-left: 600px;
 }
