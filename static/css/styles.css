@@ -3,155 +3,209 @@
 /* Global Styles */
 body {
     font-family: 'Raleway', sans-serif;
-    background-color: #f8f9fa;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes up the full viewport height */
+    overflow-x: hidden; /* Hide horizontal scrollbar if it appears */
 }
-
-/* Custom CSS for Tree Counting Application */
 
 /* Header Styles */
-.site-heading {
-    margin: 0 auto;
-    padding: 2rem 0;
-    background-color:#6C0345;
+header {
+    background: linear-gradient(90deg, #6C0345 0%, #8B0000 100%);
     color: #fff;
     text-align: center;
+    padding: 2rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ensure header spans the full width */
 }
 
-.site-heading-upper {
-    font-size: 1.5rem;
-    font-weight: 700;
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
-
-.site-heading-lower {
-    font-size: 3rem;
-    font-weight: 300;
-    line-height: 1.1;
-}
-
 
 /* Navigation Styles */
-#mainNav .navbar-nav .nav-link {
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
+/* Navigation Styles */
+nav {
+    background-color: #6bb15d;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#mainNav .navbar-nav .nav-link:hover {
+.navbar-nav {
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-nav li {
+    margin: 0 1rem;
+}
+
+.navbar-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.navbar-nav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width .3s, background-color 0.3s; /* Add transition for background-color */
+}
+
+.navbar-nav a:hover::after {
+    width: 100%;
+    background-color: #fff; /* Change underline color on hover */
+}
+
+.navbar-nav a:hover {
     color: #f8f9fa;
 }
 
-#mainNav .navbar-toggler {
-    font-size: 1.2rem;
-    text-transform: uppercase;
-   
-}
 
-.navbar {
-    background-color: #6bb15d; /* Background color for the navbar */
-    box-shadow: 0 4px 8px rgba(20, 123, 123, 0.1);
-     display: flex;
-     flex: 1;
-    justify-content: space-between; 
-    /* Add shadow for better separation */
-}
-
-.nav-link {
-    padding: 1rem 1.5rem; /* Add padding for better spacing */
-    transition: color 0.3s; /* Smooth transition for color change */
-    display: flex;
-    justify-content: space-between;
-}
-
-.nav-link:hover {
-    color:crimson; /* Change color on hover */
-}
-
-/* Section Styles */
-.page-section {
-    padding: 5rem 0;
-}
-
-.page-section .section-heading {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-}
-
-.page-section .section-subheading {
-    font-size: 1.25rem;
-    font-weight: 300;
-    margin-bottom: 3rem;
-    color: #6c757d;
-}
-
-/* Intro Section */
-.intro {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 5rem;
-}
-
-.intro .intro-img {
-    max-width: 50%;
-    border-radius: 0.5rem;
-}
-
-.intro .intro-text {
-    max-width: 45%;
+/* Main Content Styles */
+main1 {
+    flex: 1;
     padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds viewport height */
+}
+
+.result-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.result-item {
     background-color: #fff;
+    padding: 1rem;
     border-radius: 0.5rem;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 45%;
+    transition: transform 0.3s;
 }
 
-.intro .section-heading-upper {
-    font-size: 1.5rem;
-    font-weight: 700;
+.result-item img {
+    max-width: 100%; /* Ensure images are responsive */
+    height: auto; /* Allow images to maintain aspect ratio */
+    max-height: 250px; /* Limit the maximum height of images */
+    border-radius: 0.5rem;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.intro .section-heading-lower {
-    font-size: 2rem;
-    font-weight: 300;
-    line-height: 1.1;
+.result-item:hover {
+    transform: translateY(-10px);
 }
 
-.intro-button .btn {
-    font-size: 1rem;
-    font-weight: 700;
+.result-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+    display: inline-block;
+    background-color: #6C0345;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-weight: bold;
     text-transform: uppercase;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    background-color: #a0075f;
+    transform: translateY(-5px);
 }
 
 /* Footer Styles */
-.footer {
+footer {
     background-color: #343a40;
     color: #fff;
-    padding: 2rem 0;
+    text-align: center;
+    padding: 1rem 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.footer .container p {
+footer p {
     margin: 0;
     font-size: 0.9rem;
 }
 
-#listt{
+.intro-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 2rem auto; /* Example margin */
+    border-radius: 0.5rem; /* Example border radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Example box shadow */
+}
+
+/* Main Content Styles */
+/* Main Content Styles */
+main {
     display: flex;
-    justify-content:space-between;
-    position: relative;
-    padding-left:1500px;
-
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items at the top */
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds viewport height */
 }
-ul{
-list-style-type:none;
-text-decoration: none;
 
+.index-image {
+    flex: 1;
+    max-width: 50%; /* Adjust width as needed */
+    margin-right: 2rem; /* Example margin */
+}
 
+.index-image img {
+    max-width: 100%; /* Ensure images are responsive */
+    height: auto; /* Allow images to maintain aspect ratio */
+    max-height: 300px; /* Limit the maximum height of images */
+    border-radius: 0.5rem; /* Example border radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Example box shadow */
 }
-ul>li{
-    text-decoration: none;
+
+.index-content {
+    flex: 1;
+    max-width: 50%; /* Adjust width as needed */
 }
-.text-center1{
-    padding-left: 600px;
+
+.index-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.index-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Image Hover Effects */
+.result-item img:hover {
+    transform: scale(1.05); /* Scale up the image on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
 }

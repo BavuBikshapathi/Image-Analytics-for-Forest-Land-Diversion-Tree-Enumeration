@@ -1,65 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Tree Counting Using Satellite Image</title>
-        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/favicon.ico') }}" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet" />
-    </head>
-    <body>
-        <header>
-            <h1 class="site-heading text-center text-faded d-none d-lg-block">
-                <span class="site-heading-upper text-primary mb-3"><h1>Image Analytics for Forest Land Diversion Tree Enumeration</h1></span>
-            </h1>
-        </header>
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand text-uppercase fw-bold d-lg-none" href="{{ url_for('index') }}">Start application</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mx-auto">
-                        <div id="listt">
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="{{ url_for('index') }}">Home</a></li>
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="{{ url_for('about') }}">About</a></li>
-                      
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="{{ url_for('upload') }}">Predict Here</a></li>
-                        </div> </ul>
-                </div>
-            </div>
-        </nav>
-        <section class="page-section clearfix">
-            <div class="container">
-                <div class="intro">
-                    <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{ url_for('static', filename='assets/img/intro.jpg') }}" alt="..." />
-                    <div class="intro-text left-0 text-center bg-faded p-5 rounded">
-                        <h2 class="section-heading mb-4">
-                            <span class="section-heading-upper"><b>Tree</b></span>
-                            <span class="section-heading-lower"><b>Counting</b></span>
-                        </h2>
-                        <h3 class="mb-3">Accurate tree enumeration is essential for responsible forest land diversion in development projects. tree counting in forests using high-res satellite imagery and aerial photos. Advanced machine learning algorithms like YOLOv8 reducing manual methods, costs, and errors. It provides insights for informed land-use decisions, promoting sustainable practices. By leveraging technology, it enhances efficiency, accuracy, and scalability. The integration of image analytics reduces reliance on manual labor, speeding up the process. This innovative approach ensures reliable data for informed forest management decisions. It facilitates precise assessment of forest land diversion, contributing to efficient and sustainable resource management.
-
-                            .</h3>
-                        <div class="intro-button mx-auto"><a class="btn btn-primary btn-xl" href="{{ url_for('upload') }}"><h2><b>Predict</b></h2></a></div>
-                    </div>
-                </div>
-            </div>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Home - Tree Counting Using Satellite Image</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Image Analytics for Forest Land Diversion Tree Enumeration</h1>
+    </header>
+    <nav>
+        <ul class="navbar-nav">
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('upload') }}">Predict Here</a></li>
+        </ul>
+    </nav>
+    <main class="index-main">
+        <section class="index-image">
+            <img src="{{ url_for('static', filename='assets/img/intro.jpg') }}" alt="Intro Image">
         </section>
-        <footer class="footer text-faded text-center py-5">
-            <div class="container"><p class="m-0 small">&copy; 2024 tree enumeration</p></div>
-        </footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
-    </body>
+        <section class="index-content">
+            <h2>Welcome to Tree Counting Application</h2>
+            <p>Upload your satellite images to detect and count trees automatically.</p>
+            <a class="btn" href="{{ url_for('upload') }}">Get Started</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Tree Enumeration</p>
+    </footer>
+</body>
 </html>

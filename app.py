@@ -45,6 +45,9 @@ def upload():
                     yolo = YOLO('best.pt')
                     results = yolo(image)
 
+                    # Count the number of trees detected
+                    tree_count = len(results[0].boxes)
+
                     # Save the result image
                     result_img_paths = []
                     for i, result in enumerate(results):
@@ -52,7 +55,7 @@ def upload():
                         result.save(result_img_path)
                         result_img_paths.append(f"uploads/result_{i}_{f.filename}")
 
-                    return render_template('result.html', original_image=f"uploads/{f.filename}", result_images=result_img_paths)
+                    return render_template('result.html', original_image=f"uploads/{f.filename}", result_images=result_img_paths, tree_count=tree_count)
                 else:
                     print("Unsupported file extension")
                     return "Unsupported file extension", 400
